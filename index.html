@@ -1,105 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Solar Installation Company in Uttar Pradesh | Psylocke India Pvt Ltd</title>
-<meta name="description" content="MNRE & UPNEDA approved solar installation company in Uttar Pradesh providing residential, commercial & industrial rooftop solar with subsidy & free site visit.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://psylockeindia.com/">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
 
-<script type="application/ld+json">
-{
- "@context":"https://schema.org",
- "@type":"LocalBusiness",
- "name":"Psylocke India Pvt Ltd",
- "image":"https://psylockeindia.com/images/logo.png",
- "url":"https://psylockeindia.com/",
- "telephone":"+91-9115306777",
- "priceRange":"₹₹₹",
- "address":{
-   "@type":"PostalAddress",
-   "streetAddress":"08-A, Keshav Nagar, Sitapur Road",
-   "addressLocality":"Lucknow",
-   "addressRegion":"UP",
-   "postalCode":"226020",
-   "addressCountry":"IN"
- },
- "areaServed":"Uttar Pradesh",
- "aggregateRating":{
-   "@type":"AggregateRating",
-   "ratingValue":"5",
-   "reviewCount":"25"
- }
-}
-</script>
+  <title>Solar Installation Company in Uttar Pradesh | Psylocke India Pvt Ltd</title>
+
+  <meta name="description" content="Psylocke India Pvt Ltd is an MNRE & UPNEDA approved solar installation company in Uttar Pradesh providing residential, commercial & industrial rooftop solar systems with subsidy, EMI & free site visit.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="canonical" href="https://psylockeindia.com/">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- MAIN JS -->
+  <script src="/main.js" defer></script>
+
+  <!-- LOCAL BUSINESS + GOOGLE REVIEWS SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Psylocke India Pvt Ltd",
+    "url": "https://psylockeindia.com",
+    "logo": "https://psylockeindia.com/images/logo.png",
+    "telephone": "+91-9115306777",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "08-A, Keshav Nagar, Sitapur Road",
+      "addressLocality": "Lucknow",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "226020",
+      "addressCountry": "IN"
+    },
+    "areaServed": "Uttar Pradesh",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "27"
+    }
+  }
+  </script>
 </head>
 
 <body>
 
-<div class="top-bar">MNRE & UPNEDA Approved | Government Solar Subsidy Available</div>
+<!-- TOP BAR -->
+<div class="top-bar">
+  MNRE & UPNEDA Approved | Government Solar Subsidy Available Across Uttar Pradesh
+</div>
 
-<header class="header">
-  <div class="container header-flex">
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
     <div class="logo">
-      <img src="images/logo.png" alt="Psylocke India Pvt Ltd">
+      <img src="/images/logo.png" alt="Psylocke India Pvt Ltd">
       <div>
         <strong>Psylocke India Pvt Ltd</strong><br>
         <small>Solar Installation Company | Uttar Pradesh</small>
       </div>
     </div>
-    <a href="https://wa.me/919115306777" class="cta-btn">WhatsApp Now</a>
+
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/solar-systems.html">Solar Systems</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+
+    <a class="cta-btn" href="https://wa.me/919115306777">WhatsApp Now</a>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
     <div>
       <h1>Trusted Solar Installation Company in Uttar Pradesh</h1>
-      <p>Residential, Commercial & Industrial Rooftop Solar with MNRE & UPNEDA subsidy support.</p>
+      <p>
+        Residential, Commercial & Industrial Rooftop Solar Solutions with
+        MNRE & UPNEDA Subsidy, EMI & Free Site Visit.
+      </p>
+
       <ul>
-        <li>✔ Free Site Visit</li>
-        <li>✔ Government Subsidy Handling</li>
-        <li>✔ EMI & Loan Options</li>
-        <li>✔ 25+ Year Panel Warranty</li>
+        <li>✅ MNRE & UPNEDA Approved</li>
+        <li>✅ 5+ Years Experience</li>
+        <li>✅ Free Site Visit & Feasibility</li>
+        <li>✅ Complete Subsidy & Net Metering</li>
       </ul>
-      <a href="https://wa.me/919115306777" class="btn">Get Free Quote</a>
+
+      <a href="#" onclick="openPopup()" class="btn">
+        Get Free Solar Quote
+      </a>
     </div>
 
+    <!-- LEAD FORM -->
     <div class="form-card">
       <h3>Request Free Site Visit</h3>
-      <input id="name" placeholder="Name">
-      <input id="phone" placeholder="Phone">
-      <input id="city" placeholder="City">
-      <input id="load" placeholder="Load (kW)">
-      <button onclick="sendWhatsAppLead()">Submit on WhatsApp</button>
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="tel" id="phone" placeholder="WhatsApp Number">
+      <input type="text" id="city" placeholder="City / Pin Code">
+      <input type="number" id="load" placeholder="Connected Load (kW)">
+      <button onclick="sendWhatsAppLead()">Submit</button>
     </div>
   </div>
 </section>
 
-<section class="calculator">
-  <div class="container">
-    <h2>Solar Savings Calculator</h2>
-    <input id="bill" placeholder="Monthly Electricity Bill (₹)">
-    <button onclick="calculateSolar()">Calculate</button>
-    <p id="result"></p>
+<!-- TRUST -->
+<section class="trust">
+  <div class="container trust-grid">
+    <div class="trust-box">MNRE Approved</div>
+    <div class="trust-box">UPNEDA Registered</div>
+    <div class="trust-box">25+ Year Panel Warranty</div>
+    <div class="trust-box">Local UP Service Team</div>
   </div>
 </section>
 
+<!-- CALCULATORS -->
+<section class="calculators">
+  <div class="container calc-grid">
+
+    <div class="calc-card">
+      <h3>Solar Subsidy Calculator (UPNEDA)</h3>
+      <label>System Size: <strong id="systemValue">3 kW</strong></label>
+      <input type="range" id="systemSize" min="1" max="10" value="3">
+      <p>Estimated Cost: <strong id="costValue">₹180,000</strong></p>
+      <p>Subsidy: <strong id="subsidyValue">₹108,000</strong></p>
+    </div>
+
+    <div class="calc-card">
+      <h3>ROI & Payback Calculator</h3>
+      <label>Monthly Bill: <strong id="billValue">₹3000</strong></label>
+      <input type="range" id="monthlyBill" min="1000" max="10000" step="500" value="3000">
+      <p>Annual Savings: <strong id="savingValue">₹28,800</strong></p>
+      <p>Payback Period: <strong id="paybackValue">4.5 years</strong></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Ready to Reduce Your Electricity Bill?</h2>
+  <p>Book a FREE site visit with Psylocke India solar experts.</p>
+  <a href="https://wa.me/919115306777">Talk on WhatsApp</a>
+</section>
+
+<!-- FOOTER -->
 <footer>
-© 2026 Psylocke India Pvt Ltd<br>
-08-A Keshav Nagar, Sitapur Road, Lucknow – 226020<br>
-📞 9115306777 | ✉ info@psylockeindia.com
+  © 2026 Psylocke India Pvt Ltd<br>
+  08-A, Keshav Nagar, Sitapur Road, Lucknow – 226020<br>
+  📞 9115306777 | ✉ info@psylockeindia.com
 </footer>
 
-<div id="leadPopup" class="popup">
+<!-- POPUP -->
+<div id="leadPopup" class="popup-overlay">
   <div class="popup-box">
-    <span class="close" onclick="closePopup()">×</span>
-    <h3>Free Solar Consultation</h3>
-    <button onclick="closePopup()">Continue</button>
+    <button class="popup-close" onclick="closePopup()">×</button>
+    <h2>Start Saving With Solar</h2>
+    <p>Book your FREE site visit now</p>
+
+    <input type="text" id="name" placeholder="Name">
+    <input type="tel" id="phone" placeholder="Phone">
+    <input type="text" id="city" placeholder="City">
+    <input type="number" id="load" placeholder="Load (kW)">
+    <button onclick="sendWhatsAppLead()">Submit</button>
   </div>
 </div>
 
-<script src="main.js"></script>
 </body>
 </html>
