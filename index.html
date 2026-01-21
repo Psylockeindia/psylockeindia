@@ -1,123 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Solar Installation Company in Uttar Pradesh | Psylocke India Pvt Ltd</title>
+<meta charset="UTF-8">
+<title>Solar Installation Company in Uttar Pradesh | Psylocke India Pvt Ltd</title>
+<meta name="description" content="MNRE & UPNEDA approved solar installation company in Uttar Pradesh providing residential, commercial & industrial rooftop solar with subsidy & free site visit.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://psylockeindia.com/">
+<link rel="stylesheet" href="style.css">
 
-  <meta name="description" content="MNRE & UPNEDA approved solar installation company in Uttar Pradesh. Residential, Commercial & Industrial Rooftop Solar with subsidy & free site visit.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://psylockeindia.com/">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="popup.css">
-
-  <!-- LOCAL BUSINESS + REVIEWS SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Psylocke India Pvt Ltd",
-    "image": "https://psylockeindia.com/images/logo.png",
-    "url": "https://psylockeindia.com/",
-    "telephone": "+91-9115306777",
-    "priceRange": "₹₹",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "08-A, Keshav Nagar, Sitapur Road",
-      "addressLocality": "Lucknow",
-      "addressRegion": "UP",
-      "postalCode": "226020",
-      "addressCountry": "IN"
-    },
-    "areaServed": "Uttar Pradesh",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127"
-    }
-  }
-  </script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"LocalBusiness",
+ "name":"Psylocke India Pvt Ltd",
+ "image":"https://psylockeindia.com/images/logo.png",
+ "url":"https://psylockeindia.com/",
+ "telephone":"+91-9115306777",
+ "priceRange":"₹₹₹",
+ "address":{
+   "@type":"PostalAddress",
+   "streetAddress":"08-A, Keshav Nagar, Sitapur Road",
+   "addressLocality":"Lucknow",
+   "addressRegion":"UP",
+   "postalCode":"226020",
+   "addressCountry":"IN"
+ },
+ "areaServed":"Uttar Pradesh",
+ "aggregateRating":{
+   "@type":"AggregateRating",
+   "ratingValue":"5",
+   "reviewCount":"25"
+ }
+}
+</script>
 </head>
 
 <body>
 
-<div class="top-bar">
-  MNRE & UPNEDA Approved | Government Solar Subsidy Across Uttar Pradesh
-</div>
+<div class="top-bar">MNRE & UPNEDA Approved | Government Solar Subsidy Available</div>
 
-<header class="site-header">
-  <div class="container header-inner">
+<header class="header">
+  <div class="container header-flex">
     <div class="logo">
       <img src="images/logo.png" alt="Psylocke India Pvt Ltd">
       <div>
         <strong>Psylocke India Pvt Ltd</strong><br>
-        <small>Solar Installation Company | UP</small>
+        <small>Solar Installation Company | Uttar Pradesh</small>
       </div>
     </div>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="solar-systems.html">Solar Systems</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <a class="cta-btn" href="https://wa.me/919115306777">WhatsApp Now</a>
+    <a href="https://wa.me/919115306777" class="cta-btn">WhatsApp Now</a>
   </div>
 </header>
 
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <h2>Trusted Solar Installation Company in Uttar Pradesh</h2>
-      <p>
-        Residential, Commercial & Industrial Rooftop Solar Solutions with MNRE &
-        UPNEDA subsidy support. Free site visit available.
-      </p>
-
+      <h1>Trusted Solar Installation Company in Uttar Pradesh</h1>
+      <p>Residential, Commercial & Industrial Rooftop Solar with MNRE & UPNEDA subsidy support.</p>
       <ul>
-        <li>✅ 5+ Years Solar Installation Experience</li>
-        <li>✅ MNRE & UPNEDA Approved Vendor</li>
-        <li>✅ Complete Subsidy & Net Metering Support</li>
-        <li>✅ EMI & Solar Loan Options Available</li>
+        <li>✔ Free Site Visit</li>
+        <li>✔ Government Subsidy Handling</li>
+        <li>✔ EMI & Loan Options</li>
+        <li>✔ 25+ Year Panel Warranty</li>
       </ul>
-
-      <a href="https://wa.me/919115306777" class="btn">Get Free Solar Quote</a>
+      <a href="https://wa.me/919115306777" class="btn">Get Free Quote</a>
     </div>
 
     <div class="form-card">
       <h3>Request Free Site Visit</h3>
-      <input type="text" placeholder="Full Name">
-      <input type="tel" placeholder="WhatsApp Number">
-      <input type="text" placeholder="Pin Code">
-      <button>Submit</button>
+      <input id="name" placeholder="Name">
+      <input id="phone" placeholder="Phone">
+      <input id="city" placeholder="City">
+      <input id="load" placeholder="Load (kW)">
+      <button onclick="sendWhatsAppLead()">Submit on WhatsApp</button>
     </div>
   </div>
 </section>
 
+<section class="calculator">
+  <div class="container">
+    <h2>Solar Savings Calculator</h2>
+    <input id="bill" placeholder="Monthly Electricity Bill (₹)">
+    <button onclick="calculateSolar()">Calculate</button>
+    <p id="result"></p>
+  </div>
+</section>
+
 <footer>
-  © 2026 Psylocke India Pvt Ltd<br>
-  MNRE & UPNEDA Approved Solar Installation Company<br>
-  📍 Lucknow | Serving All of Uttar Pradesh<br>
-  📞 9115306777 | ✉ info@psylockeindia.com
+© 2026 Psylocke India Pvt Ltd<br>
+08-A Keshav Nagar, Sitapur Road, Lucknow – 226020<br>
+📞 9115306777 | ✉ info@psylockeindia.com
 </footer>
 
-<!-- POPUP -->
-<div id="leadPopup" class="popup-overlay">
+<div id="leadPopup" class="popup">
   <div class="popup-box">
-    <button class="popup-close" onclick="closePopup()">×</button>
-    <h2>Start Saving With Solar</h2>
-    <p>Book a FREE site visit today</p>
-    <input type="text" placeholder="Your Name">
-    <input type="tel" placeholder="Phone Number">
-    <input type="text" placeholder="City">
-    <button>Submit</button>
+    <span class="close" onclick="closePopup()">×</span>
+    <h3>Free Solar Consultation</h3>
+    <button onclick="closePopup()">Continue</button>
   </div>
 </div>
 
-<script src="main.js" defer></script>
-<script src="jspopup.js" defer></script>
-
+<script src="main.js"></script>
 </body>
 </html>
