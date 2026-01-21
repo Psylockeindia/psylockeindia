@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: #ffffff;
   color: #0f172a;
   line-height: 1.6;
@@ -21,9 +21,11 @@ body {
   --primary: #16a34a;
   --primary-dark: #15803d;
   --accent: #ff7a18;
-  --light: #f8fafc;
+  --dark: #0f172a;
   --gray: #64748b;
+  --light: #f8fafc;
   --border: #e5e7eb;
+  --shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -39,7 +41,7 @@ body {
    TOP BAR
 ========================= */
 .top-bar {
-  background: #dcfce7;
+  background: linear-gradient(90deg, #dcfce7, #ecfeff);
   color: #065f46;
   text-align: center;
   font-weight: 600;
@@ -72,13 +74,13 @@ body {
 }
 
 .logo img {
-  height: 42px;
+  height: 44px;
 }
 
 nav a {
-  margin: 0 12px;
+  margin: 0 14px;
   text-decoration: none;
-  color: #0f172a;
+  color: var(--dark);
   font-weight: 600;
 }
 
@@ -100,51 +102,65 @@ nav a:hover {
 ========================= */
 .btn {
   display: inline-block;
-  background: var(--primary);
-  color: #ffffff;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-weight: 800;
   text-decoration: none;
+  transition: 0.25s;
 }
 
-.btn:hover {
+.btn.primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.btn.primary:hover {
   background: var(--primary-dark);
+}
+
+.btn.secondary {
+  background: #ffffff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 /* =========================
    HERO
 ========================= */
 .hero {
-  padding: 90px 0;
+  padding: 100px 0;
   background: linear-gradient(to bottom, #f0fdf4, #ffffff);
 }
 
 .hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  gap: 50px;
   align-items: center;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 900;
   margin-bottom: 16px;
+}
+
+.hero h1 span {
+  color: var(--primary);
 }
 
 .hero p {
   font-size: 18px;
   color: var(--gray);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
-.hero ul {
+.hero-points {
   list-style: none;
   margin-bottom: 30px;
 }
 
-.hero li {
+.hero-points li {
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -154,15 +170,15 @@ nav a:hover {
 ========================= */
 .form-card {
   background: #ffffff;
-  padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
 }
 
 .form-card h3 {
   font-size: 22px;
   font-weight: 800;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .form-card input,
@@ -183,16 +199,22 @@ nav a:hover {
   cursor: pointer;
 }
 
-.form-card button:hover {
-  background: var(--primary-dark);
+.form-note {
+  font-size: 13px;
+  color: var(--gray);
+  text-align: center;
 }
 
 /* =========================
-   TRUST SECTION
+   TRUST
 ========================= */
 .trust {
   background: var(--light);
-  padding: 60px 0;
+  padding: 70px 0;
+}
+
+.trust-highlight {
+  margin-top: -40px;
 }
 
 .trust-grid {
@@ -204,17 +226,73 @@ nav a:hover {
 .trust-box {
   background: #ffffff;
   padding: 26px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
+  border-radius: 16px;
   text-align: center;
   font-weight: 700;
+  box-shadow: var(--shadow);
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.25s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin: 16px;
+}
+
+.service-card p {
+  margin: 0 16px 16px;
+  color: var(--gray);
+}
+
+.service-card a {
+  display: block;
+  margin: 0 16px 20px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 /* =========================
    CALCULATORS
 ========================= */
 .calculators {
-  padding: 70px 0;
+  padding: 80px 0;
 }
 
 .calc-grid {
@@ -226,8 +304,8 @@ nav a:hover {
 .calc-card {
   background: #ffffff;
   padding: 28px;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
 }
 
 .calc-card h3 {
@@ -235,32 +313,27 @@ nav a:hover {
   margin-bottom: 14px;
 }
 
-.calc-card input[type="range"] {
-  width: 100%;
-  margin: 14px 0;
-}
-
 /* =========================
    CTA
 ========================= */
 .cta {
-  background: var(--primary);
+  background: linear-gradient(135deg, #16a34a, #22c55e);
   color: #ffffff;
-  padding: 70px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .cta h2 {
-  font-size: 32px;
+  font-size: 34px;
   margin-bottom: 12px;
 }
 
 .cta a {
   background: #ffffff;
   color: var(--primary);
-  padding: 16px 26px;
-  border-radius: 12px;
-  font-weight: 800;
+  padding: 16px 30px;
+  border-radius: 14px;
+  font-weight: 900;
   display: inline-block;
   margin-top: 20px;
 }
@@ -271,7 +344,7 @@ nav a:hover {
 footer {
   background: #022c22;
   color: #d1fae5;
-  padding: 30px 20px;
+  padding: 34px 20px;
   text-align: center;
   font-size: 14px;
 }
@@ -294,7 +367,7 @@ footer {
   padding: 30px;
   width: 95%;
   max-width: 420px;
-  border-radius: 12px;
+  border-radius: 16px;
   position: relative;
   text-align: center;
 }
@@ -319,8 +392,8 @@ footer {
 
 .popup-close {
   position: absolute;
-  right: 12px;
-  top: 10px;
+  right: 14px;
+  top: 12px;
   font-size: 22px;
   border: none;
   background: none;
@@ -332,12 +405,13 @@ footer {
 ========================= */
 @media (max-width: 900px) {
   .hero-grid,
+  .services-grid,
   .calc-grid,
   .trust-grid {
     grid-template-columns: 1fr;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
 }
