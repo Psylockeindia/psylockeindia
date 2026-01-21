@@ -1,39 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://psylockeindia.com/</loc>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://psylockeindia.com/about.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://psylockeindia.com/residential-solar.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://psylockeindia.com/commercial-solar.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://psylockeindia.com/solar-systems.html</loc>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://psylockeindia.com/solar-comparison.html</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://psylockeindia.com/contact.html</loc>
-    <priority>0.8</priority>
-  </url>
+<url><loc>https://psylockeindia.com/</loc></url>
+<url><loc>https://psylockeindia.com/about.html</loc></url>
+<url><loc>https://psylockeindia.com/contact.html</loc></url>
+<url><loc>https://psylockeindia.com/residential-solar.html</loc></url>
+<url><loc>https://psylockeindia.com/commercial-solar.html</loc></url>
+<url><loc>https://psylockeindia.com/solar-systems.html</loc></url>
+<url><loc>https://psylockeindia.com/on-grid.html</loc></url>
+<url><loc>https://psylockeindia.com/off-grid.html</loc></url>
+<url><loc>https://psylockeindia.com/hybrid.html</loc></url>
+<url><loc>https://psylockeindia.com/solar-comparison.html</loc></url>
+<url><loc>https://psylockeindia.com/reviews-faq.html</loc></url>
+<url><loc>https://psylockeindia.com/solar-loan-emi.html</loc></url>
+<url><loc>https://psylockeindia.com/solar-subsidy-upneda.html</loc></url>
 
 </urlset>
