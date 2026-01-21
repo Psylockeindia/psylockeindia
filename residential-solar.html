@@ -3,209 +3,116 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Residential Solar Installation in Uttar Pradesh | Psylocke India Pvt Ltd</title>
+  <title>Residential Solar Installation in Uttar Pradesh | Psylocke India</title>
 
-  <meta name="description" content="Residential rooftop solar installation in Uttar Pradesh with MNRE & UPNEDA subsidy, EMI options and free site visit.">
+  <meta name="description" content="MNRE & UPNEDA approved residential rooftop solar installation across Uttar Pradesh. Save up to 90% on electricity bills with subsidy & EMI options.">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="canonical" href="https://psylockeindia.com/residential-solar.html">
 
-  <link rel="stylesheet" href="css/style.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Psylocke India Pvt Ltd",
-    "url": "https://psylockeindia.com",
-    "telephone": "+91-9115306777",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Lucknow",
-      "addressRegion": "Uttar Pradesh",
-      "addressCountry": "IN"
-    }
-  }
-  </script>
-
+  <link rel="stylesheet" href="/style.css">
+  <script src="/main.js" defer></script>
 </head>
 
 <body>
 
-<!-- ===== TOP BAR ===== -->
 <div class="top-bar">
-  Residential Solar Solutions | MNRE & UPNEDA Approved
+  Residential Solar Solutions • MNRE & UPNEDA Approved • Free Site Visit
 </div>
 
-<!-- ===== HEADER ===== -->
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo">
-      <img src="images/logo.png" alt="Psylocke India Pvt Ltd">
+      <img src="/images/logo.png">
       <div>
         <strong>Psylocke India Pvt Ltd</strong><br>
-        <small>Residential Rooftop Solar | Uttar Pradesh</small>
+        <small>Residential Rooftop Solar | UP</small>
       </div>
     </div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="solar-systems.html">Solar Systems</a>
-      <a href="contact.html">Contact</a>
+      <a href="/index.html">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/solar-systems.html">Solar Systems</a>
+      <a href="/contact.html">Contact</a>
     </nav>
 
-    <a class="cta-btn" href="https://wa.me/919115306777">WhatsApp Now</a>
+    <a class="cta-btn" href="https://wa.me/919115306777">WhatsApp</a>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="container hero-grid">
-
     <div>
-      <h2>Residential Rooftop Solar for Your Home</h2>
+      <h1>Residential Rooftop Solar for Your Home</h1>
       <p>
-        Reduce your electricity bills by up to <strong>90%</strong> with a
-        government-approved rooftop solar system for your home.
-        Psylocke India provides complete residential solar solutions
-        across Uttar Pradesh.
+        Reduce your electricity bills by up to 90% with government-approved
+        residential rooftop solar systems across Uttar Pradesh.
       </p>
 
-      <ul>
-        <li>✅ MNRE & UPNEDA approved installation</li>
-        <li>✅ Government subsidy assistance</li>
-        <li>✅ EMI & solar loan options available</li>
-        <li>✅ Free site visit & system design</li>
+      <ul class="hero-points">
+        <li>✔ MNRE & UPNEDA Approved Systems</li>
+        <li>✔ Government Subsidy Support</li>
+        <li>✔ EMI & Loan Options Available</li>
+        <li>✔ 25+ Years Panel Warranty</li>
       </ul>
 
-      <a href="#" onclick="openPopup()" class="btn">
-        Get Residential Solar Quote
+      <a href="#" onclick="openPopup()" class="btn primary">
+        Get Free Site Visit
       </a>
     </div>
 
-    <!-- ===== QUICK FORM ===== -->
     <div class="form-card">
       <h3>Book Free Site Visit</h3>
-      <input type="text" placeholder="Full Name">
-      <input type="tel" placeholder="WhatsApp Number">
-      <input type="text" placeholder="Pin Code">
-      <button onclick="openPopup()">Submit</button>
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="tel" id="phone" placeholder="WhatsApp Number">
+      <input type="text" id="city" placeholder="City / Pin Code">
+      <button onclick="sendWhatsAppLead()">Submit</button>
     </div>
-
   </div>
 </section>
 
-<!-- ===== WHY SOLAR ===== -->
 <section class="trust">
   <div class="container trust-grid">
-    <div class="trust-box">Up to 90% Electricity Bill Savings</div>
-    <div class="trust-box">25+ Year Panel Performance Warranty</div>
+    <div class="trust-box">Up to 90% Bill Savings</div>
     <div class="trust-box">Net Metering Enabled</div>
-    <div class="trust-box">Local UP Installation Team</div>
+    <div class="trust-box">Subsidy Assistance</div>
+    <div class="trust-box">Local UP Support Team</div>
   </div>
 </section>
 
-<!-- ===== SYSTEM SIZES ===== -->
-<section class="calculators">
+<section class="services">
   <div class="container">
-    <h2 style="margin-bottom:30px;">Popular Residential Solar System Sizes</h2>
+    <h2 class="section-title">Popular Residential Solar Sizes</h2>
 
-    <div class="calc-grid">
-      <div class="calc-card">
+    <div class="services-grid">
+      <div class="service-card">
         <h3>3 kW Solar System</h3>
-        <p>Ideal for small homes</p>
-        <p>Monthly Bill Offset: ₹2,500 – ₹3,500</p>
-        <p><strong>Subsidy Available</strong></p>
+        <p>Ideal for small homes • Subsidy Available</p>
       </div>
 
-      <div class="calc-card">
+      <div class="service-card">
         <h3>5 kW Solar System</h3>
-        <p>Ideal for medium homes</p>
-        <p>Monthly Bill Offset: ₹4,000 – ₹6,000</p>
-        <p><strong>Subsidy Available</strong></p>
+        <p>Perfect for medium households • EMI Options</p>
       </div>
 
-      <div class="calc-card">
+      <div class="service-card">
         <h3>10 kW Solar System</h3>
-        <p>Large homes / villas</p>
-        <p>Monthly Bill Offset: ₹8,000+</p>
-        <p><strong>Subsidy Available</strong></p>
+        <p>Large homes & villas • Maximum Savings</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SUBSIDY INFO ===== -->
-<section class="cities">
-  <div class="container">
-    <h2>Residential Solar Subsidy in Uttar Pradesh</h2>
-    <p>
-      Homeowners in Uttar Pradesh can avail government subsidy on residential
-      rooftop solar systems under MNRE & UPNEDA schemes.
-      Psylocke India handles the complete subsidy documentation,
-      inspection, and approval process.
-    </p>
-  </div>
-</section>
-
-<!-- ===== CTA ===== -->
 <section class="cta">
   <h2>Go Solar for Your Home Today</h2>
-  <p>Book a FREE site visit and get a customized solar plan.</p>
-  <a href="https://wa.me/919115306777">Talk to Residential Solar Expert</a>
+  <p>Get expert guidance, subsidy support & FREE site visit.</p>
+  <a href="https://wa.me/919115306777">Talk to Solar Expert</a>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <footer>
-  © 2026 Psylocke India Pvt Ltd<br>
-  Residential Solar Installation Across Uttar Pradesh<br>
-  📞 9115306777 | ✉ info@psylockeindia.com
+  © 2026 Psylocke India Pvt Ltd • Residential Solar Installation Across Uttar Pradesh
 </footer>
-
-<!-- ===== LEAD POPUP ===== -->
-<div id="leadPopup" class="popup-overlay">
-  <div class="popup-box">
-    <button class="popup-close" onclick="closePopup()">×</button>
-
-    <h2>Start Saving With Solar</h2>
-    <p>Talk to Psylocke India experts & book a FREE site visit</p>
-
-    <form onsubmit="sendWhatsAppLead(event)">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="tel" id="phone" placeholder="Your Phone Number" required>
-      <input type="text" id="city" placeholder="City" required>
-      <input type="email" id="email" placeholder="Email">
-      <input type="number" id="load" placeholder="Connected Load (kW)">
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</div>
-
-<!-- ===== POPUP SCRIPT ===== -->
-<script>
-function openPopup() {
-  document.getElementById("leadPopup").style.display = "flex";
-}
-function closePopup() {
-  document.getElementById("leadPopup").style.display = "none";
-}
-function sendWhatsAppLead(e) {
-  e.preventDefault();
-  const msg =
-    `New Residential Solar Lead 🚀%0A` +
-    `Name: ${name.value}%0A` +
-    `Phone: ${phone.value}%0A` +
-    `City: ${city.value}%0A` +
-    `Email: ${email.value}%0A` +
-    `Load: ${load.value} kW`;
-
-  window.open(`https://wa.me/919115306777?text=${msg}`, "_blank");
-  closePopup();
-}
-setTimeout(openPopup, 4000);
-</script>
 
 </body>
 </html>
