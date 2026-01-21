@@ -1,146 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Solar Loan & EMI Options in Uttar Pradesh | Psylocke India</title>
-
-  <meta name="description" content="Explore solar loan & EMI options for rooftop solar installation in Uttar Pradesh. Psylocke India offers easy EMI plans with quick approvals." />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="canonical" href="https://psylockeindia.com/solar-loan-emi.html" />
-
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="UTF-8">
+<title>Solar Loan EMI Calculator | Psylocke India</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="main.js" defer></script>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-  Easy Solar EMI | Low Interest | Fast Approval
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="container header-inner">
-    <div class="logo">
-      <img src="images/logo.png" alt="Psylocke India Pvt Ltd">
-      <div>
-        <h1>Psylocke India Pvt Ltd</h1>
-        <p>Solar Finance & EMI Solutions | Uttar Pradesh</p>
-      </div>
-    </div>
-    <a href="https://wa.me/919115306777" class="btn">Check EMI Eligibility</a>
-  </div>
-</header>
-
-<!-- HERO -->
 <section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <h2>Install Solar with Easy EMI Options</h2>
-      <p>
-        Go solar without worrying about upfront cost. Psylocke India provides
-        easy solar loan & EMI options to make rooftop solar affordable for
-        homes and businesses across Uttar Pradesh.
-      </p>
-
-      <ul>
-        <li>✅ Low interest solar loans</li>
-        <li>✅ Flexible tenure up to 10 years</li>
-        <li>✅ Minimal documentation</li>
-        <li>✅ Faster approvals</li>
-      </ul>
-
-      <a href="https://wa.me/919115306777" class="btn">
-        Get EMI Assistance on WhatsApp
-      </a>
-    </div>
-
-    <!-- QUICK FORM -->
-    <div class="form-card">
-      <h3>Check EMI Eligibility</h3>
-      <input type="text" placeholder="Full Name">
-      <input type="tel" placeholder="WhatsApp Number">
-      <input type="text" placeholder="City / Pincode">
-      <button onclick="sendWhatsApp()">Request EMI Details</button>
-    </div>
-  </div>
-</section>
-
-<!-- EMI DETAILS -->
-<section class="calculators">
   <div class="container">
-    <h2 style="margin-bottom:30px">How Solar EMI Works</h2>
-
-    <div class="calc-grid">
-      <div class="calc-card">
-        <h3>Choose System Size</h3>
-        <p>Select solar system size based on your electricity usage.</p>
-      </div>
-
-      <div class="calc-card">
-        <h3>Apply for Solar Loan</h3>
-        <p>We assist with loan application and documentation.</p>
-      </div>
-
-      <div class="calc-card">
-        <h3>Easy Monthly EMI</h3>
-        <p>Pay affordable EMIs instead of high electricity bills.</p>
-      </div>
-
-      <div class="calc-card">
-        <h3>Start Saving</h3>
-        <p>Generate your own electricity and reduce monthly expenses.</p>
-      </div>
-    </div>
+    <h1>Solar Loan EMI Calculator</h1>
   </div>
 </section>
 
-<!-- EMI BENEFITS -->
-<section class="trust">
-  <div class="container">
-    <h2 style="margin-bottom:20px">Benefits of Solar EMI</h2>
-    <ul>
-      <li>✔ EMI often equal to or less than electricity bill</li>
-      <li>✔ No heavy upfront investment</li>
-      <li>✔ Long-term savings after loan closure</li>
-      <li>✔ Increased property value</li>
-    </ul>
+<section class="section fade-up">
+  <div class="container calc-card">
+    <label>Loan Amount (₹)</label>
+    <input type="range" id="loanAmount" min="100000" max="1000000" value="300000">
+
+    <label>Tenure (Years)</label>
+    <input type="range" id="loanTenure" min="1" max="10" value="5">
+
+    <p>Estimated EMI: <strong id="emiValue">₹6,200</strong></p>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2>Make the Smart Switch to Solar</h2>
-  <p>Finance your solar system easily with EMI options.</p>
-  <a href="https://wa.me/919115306777">Talk to Solar Finance Expert</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 Psylocke India Pvt Ltd<br>
-  Solar Loan & EMI Solutions Across Uttar Pradesh<br>
-  📞 9115306777 | ✉ info@psylockeindia.com
-</footer>
-
-<script src="js/main.js"></script>
-<div class="popup-overlay">
-  <div class="popup-box">
-    <h3>Start Saving with Solar</h3>
-
-    <input type="text" placeholder="Your Name">
-    <input type="tel" placeholder="Phone Number">
-    <input type="text" placeholder="City">
-    <input type="email" placeholder="Email">
-    <input type="text" placeholder="Connected Load (kW)">
-
-    <button>Submit</button>
-
-    <p style="margin-top:10px;cursor:pointer;color:gray;" onclick="closePopup()">
-      Close
-    </p>
-  </div>
-</div>
-
+<footer>© 2026 Psylocke India Pvt Ltd</footer>
 </body>
 </html>
