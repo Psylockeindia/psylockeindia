@@ -1,73 +1,113 @@
-/* =========================
-   WHATSAPP LEAD
-========================= */
-function sendWhatsAppLead(e) {
-  if (e) e.preventDefault();
-
-  const name = document.getElementById("name")?.value || "";
-  const phone = document.getElementById("phone")?.value || "";
-  const city = document.getElementById("city")?.value || "";
-  const load = document.getElementById("load")?.value || "";
-
-  const msg = encodeURIComponent(
-    `New Solar Lead 🔆
-Name: ${name}
-Phone: ${phone}
-City: ${city}
-Load: ${load} kW`
-  );
-
-  window.open(`https://wa.me/919115306777?text=${msg}`, "_blank");
-}
-
-/* =========================
-   POPUP
-========================= */
+/* =====================================
+   GLOBAL HELPERS
+===================================== */
 function openPopup() {
-  const p = document.getElementById("leadPopup");
-  if (p) p.style.display = "flex";
+  document.getElementById("leadPopup").style.display = "flex";
 }
 
 function closePopup() {
-  const p = document.getElementById("leadPopup");
-  if (p) p.style.display = "none";
+  document.getElementById("leadPopup").style.display = "none";
 }
 
+/* =====================================
+   AUTO POPUP (AFTER 4 SECONDS)
+===================================== */
 window.addEventListener("load", () => {
   setTimeout(() => {
-    const p = document.getElementById("leadPopup");
-    if (p) p.style.display = "flex";
-  }, 3000);
+    const popup = document.getElementById("leadPopup");
+    if (popup) popup.style.display = "flex";
+  }, 4000);
 });
 
-/* =========================
-   SUBSIDY CALCULATOR
-========================= */
-const system = document.getElementById("systemSize");
-if (system) {
-  system.oninput = () => {
-    const kw = system.value;
+/* =====================================
+   WHATSAPP LEAD SUBMISSION
+===================================== */
+function sendWhatsAppLead() {
+  const name =
+    document.getElementById("name")?.value || "Not Provided";
+  const phone =
+    document.getElementById("phone")?.value || "Not Provided";
+  const city =
+    document.getElementById("city")?.value || "Not Provided";
+  const load =
+    document.getElementById("load")?.value || "Not Provided";
+
+  const message = encodeURIComponent(
+    `New Solar Enquiry 🚀
+
+Name: ${name}
+Phone: ${phone}
+City / Pin: ${city}
+Connected Load: ${load} kW
+
+Requesting free site visit & subsidy details.`
+  );
+
+  window.open(
+    `https://wa.me/919115306777?text=${message}`,
+    "_blank"
+  );
+
+  closePopup();
+}
+
+/* =====================================
+   SUBSIDY CALCULATOR (UPNEDA)
+===================================== */
+const systemSlider = document.getElementById("systemSize");
+if (systemSlider) {
+  const systemValue = document.getElementById("systemValue");
+  const costValue = document.getElementById("costValue");
+  const subsidyValue = document.getElementById("subsidyValue");
+
+  systemSlider.addEventListener("input", () => {
+    const kw = Number(systemSlider.value);
+    systemValue.innerText = `${kw} kW`;
+
     const cost = kw * 60000;
-    let subsidy = kw <= 3 ? cost * 0.4 : (3 * 60000 * 0.4) + ((kw - 3) * 60000 * 0.2);
+    let subsidy = 0;
 
-    document.getElementById("systemValue").innerText = kw + " kW";
-    document.getElementById("costValue").innerText = "₹" + cost.toLocaleString();
-    document.getElementById("subsidyValue").innerText = "₹" + Math.round(subsidy).toLocaleString();
-  };
+    if (kw <= 3) {
+      subsidy = cost * 0.4;
+    } else {
+      subsidy = (3 * 60000 * 0.4) + ((kw - 3) * 60000 * 0.2);
+    }
+
+    costValue.innerText = `₹${cost.toLocaleString()}`;
+    subsidyValue.innerText = `₹${Math.round(subsidy).toLocaleString()}`;
+  });
 }
 
-/* =========================
-   ROI CALCULATOR
-========================= */
-const bill = document.getElementById("monthlyBill");
-if (bill) {
-  bill.oninput = () => {
-    const b = bill.value;
-    const yearly = b * 12 * 0.8;
-    const payback = (300000 / yearly).toFixed(1);
+/* =====================================
+   ROI & PAYBACK CALCULATOR
+===================================== */
+const billSlider = document.getElementById("monthlyBill");
+if (billSlider) {
+  const billValue = document.getElementById("billValue");
+  const savingValue = document.getElementById("savingValue");
+  const paybackValue = document.getElementById("paybackValue");
 
-    document.getElementById("billValue").innerText = "₹" + b;
-    document.getElementById("savingValue").innerText = "₹" + yearly.toLocaleString();
-    document.getElementById("paybackValue").innerText = payback + " years";
-  };
+  billSlider.addEventListener("input", () => {
+    const bill = Number(billSlider.value);
+    billValue.innerText = `₹${bill}`;
+
+    const annualSaving = bill * 12 * 0.8;
+    const estimatedSystemCost = 300000;
+
+    const paybackYears = (
+      estimatedSystemCost / annualSaving
+    ).toFixed(1);
+
+    savingValue.innerText = `₹${annualSaving.toLocaleString()}`;
+    paybackValue.innerText = `${paybackYears} years`;
+  });
 }
+
+/* =====================================
+   SAFE CLICK HANDLING (NO ERRORS)
+===================================== */
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("popup-overlay")) {
+    closePopup();
+  }
+});
