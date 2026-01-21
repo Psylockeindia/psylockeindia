@@ -128,8 +128,10 @@ nav a:hover {
    HERO
 ========================= */
 .hero {
-  padding: 100px 0;
-  background: linear-gradient(to bottom, #f0fdf4, #ffffff);
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("images/solar-hero.webp") center/cover no-repeat;
+}
+
 }
 
 .hero-grid {
@@ -455,4 +457,5 @@ footer {
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
    }
+
 
