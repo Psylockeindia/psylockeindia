@@ -11,19 +11,28 @@
 
   <link rel="canonical" href="https://psylockeindia.com/about.html">
 
-  <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="popup.css">
-<script src="main.js" defer></script>
-<script src="jspopup.js" defer></script>
+  <!-- ✅ FINAL CSS (ABSOLUTE PATH) -->
+  <link rel="stylesheet" href="/style.css">
 
+  <!-- ✅ FINAL JS (ONE FILE ONLY) -->
+  <script src="/main.js" defer></script>
 
+  <!-- ✅ ORGANIZATION SCHEMA -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Psylocke India Pvt Ltd",
     "url": "https://psylockeindia.com",
-    "logo": "https://psylockeindia.com/images/logo.png"
+    "logo": "https://psylockeindia.com/images/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "08-A, Keshav Nagar, Sitapur Road",
+      "addressLocality": "Lucknow",
+      "addressRegion": "UP",
+      "postalCode": "226020",
+      "addressCountry": "IN"
+    }
   }
   </script>
 </head>
@@ -39,7 +48,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <div class="logo">
-      <img src="images/logo.png" alt="Psylocke India Pvt Ltd">
+      <img src="/images/logo.png" alt="Psylocke India Pvt Ltd">
       <div>
         <strong>Psylocke India Pvt Ltd</strong><br>
         <small>Solar Installation Company | Uttar Pradesh</small>
@@ -47,10 +56,10 @@
     </div>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html"><strong>About</strong></a>
-      <a href="solar-systems.html">Solar Systems</a>
-      <a href="contact.html">Contact</a>
+      <a href="/index.html">Home</a>
+      <a href="/about.html"><strong>About</strong></a>
+      <a href="/solar-systems.html">Solar Systems</a>
+      <a href="/contact.html">Contact</a>
     </nav>
 
     <a class="cta-btn" href="https://wa.me/919115306777">WhatsApp Now</a>
@@ -118,4 +127,3 @@
 
 </body>
 </html>
-
