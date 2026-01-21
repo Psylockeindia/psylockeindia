@@ -110,4 +110,24 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("popup-overlay")) {
     closePopup();
   }
+   /* =========================
+   SCROLL REVEAL EFFECT
+   ========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-up, .zoom-in");
+
+  const revealOnScroll = () => {
+    elements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll();
 });
+
+});
+
